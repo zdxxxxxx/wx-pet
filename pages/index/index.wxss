@@ -1,0 +1,125 @@
+/**index.wxss**/
+.bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.bg .bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.bg .pet-container {
+  position: absolute;
+  height: 600rpx;
+  width: 100%;
+  top: 55%;
+  margin-top: -300rpx;
+  text-align: center;
+}
+.bg .pet-container .bg-pet {
+  width: 410rpx;
+  height: 500rpx;
+}
+.bg .pet-container .bg-food {
+  position: absolute;
+  width: 300rpx;
+  height: 230rpx;
+  display: block;
+  right: 50rpx;
+  top: 325rpx;
+}
+.bg .pet-container .progress {
+  position: absolute;
+  width: 200rpx;
+  height: 20rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  display: block;
+  right: 112rpx;
+  top: 558rpx;
+}
+.bg .pet-container .progress .progress-val {
+  background: #2ab6f5;
+  height: 20rpx;
+}
+.pet-info {
+  position: absolute;
+  width: 300rpx;
+  height: 230rpx;
+  top: 220rpx;
+  left: 30rpx;
+  z-index: 2;
+  border-radius: 40rpx;
+  padding-left: 12rpx;
+  padding-top: 30rpx;
+  background: rgba(255, 255, 255, 0.5);
+}
+.pet-info .name {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.pet-info .num {
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.pet-info .num .info {
+  width: 200rpx;
+  height: 16rpx;
+  display: inline-block;
+  margin-left: 10rpx;
+  background: #785538;
+  border-radius: 10rpx;
+  overflow: hidden;
+  border: 1px solid #000000;
+}
+.pet-info .num .info .progress-bg {
+  width: 30%;
+  height: 16rpx;
+  border-radius: 10rpx;
+  background: #2effb8;
+}
+.pet-info .stars {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  background: url('https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/star-grey.png');
+  background-size: 100% 100%;
+  vertical-align: middle;
+}
+.bottom-btns {
+  position: fixed;
+  bottom: 50rpx;
+  right: 200rpx;
+  width: 300rpx;
+  height: 100rpx;
+  z-index: 10;
+}
+.bottom-btns .btn-icon {
+  display: inline-block;
+  width: 80rpx;
+  height: 90rpx;
+  margin-right: 40rpx;
+}
+.bottom-btns .btn-icon image {
+  width: 100%;
+  height: 100%;
+}
+.tool-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.niudan-btn {
+  position: fixed;
+  top: 20%;
+  right: 10rpx ;
+}

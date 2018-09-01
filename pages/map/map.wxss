@@ -1,0 +1,60 @@
+/**index.wxss**/
+.bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.bg .bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.bg .pet-container {
+  position: absolute;
+  height: 600rpx;
+  width: 100%;
+  top: 50%;
+  margin-top: -300rpx;
+  text-align: center;
+}
+.bg .pet-container .bg-pet {
+  width: 410rpx;
+  height: 500rpx;
+}
+.bg .pet-container .bg-food {
+  position: absolute;
+  width: 300rpx;
+  height: 230rpx;
+  display: block;
+  right: 50rpx;
+  top: 325rpx;
+}
+.bg .pet-container .progress {
+  position: absolute;
+  width: 200rpx;
+  height: 20rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  display: block;
+  right: 112rpx;
+  top: 558rpx;
+}
+.bg .pet-container .progress .progress-val {
+  background: #2ab6f5;
+  height: 20rpx;
+}
+.tool-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.niudan-btn {
+  position: fixed;
+  top: 20%;
+  right: 10rpx ;
+}

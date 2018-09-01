@@ -1,0 +1,11 @@
+<van-popup custom-class='model-style' show="{{ show }}" position="bottom" bind:click-overlay="hide">
+    <view class="model-content" style="height:{{height+'rpx'}}">
+        <view class="model-icon">
+            <image src="https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_zuorenwu.png" />
+        </view>
+        <view class="header">
+            <view class="icon">x</view>
+        </view>
+        <slot name="content"></slot>
+    </view>
+</van-popup>

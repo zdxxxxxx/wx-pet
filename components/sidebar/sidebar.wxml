@@ -1,0 +1,10 @@
+<view class="sidebar">
+    <view class='sidebar-top-nav'>
+        <view class="btn-icon" wx:for="{{navBtns}}" wx:for-index="idx" wx:key="{{idx}}">
+            <image data-page="{{item.page}}" bindtap="go" src="{{item.iconUrl}}" />
+        </view>
+    </view>
+    <view class="sidebar-bottom-btn">
+        <image data-page="{{bottomBtn.page}}" bindtap="go" src="{{bottomBtn.iconUrl}}" />
+    </view>
+</view>

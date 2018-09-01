@@ -1,0 +1,61 @@
+/**index.wxss**/
+.bg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .bg-img{
+        position:absolute;
+        width:100%;
+        height: 100%;
+    }
+    .pet-container{
+        position: absolute;
+        height: 600rpx;
+        width: 100%;
+        top:50%;
+        margin-top: -300rpx;
+        text-align: center;
+        .bg-pet{
+            width:410rpx;
+            height:500rpx;
+        }
+        .bg-food{
+            position:absolute;
+            width:300rpx;
+            height:230rpx;
+            display:block;
+            right:50rpx;
+            top:325rpx;
+        }
+        .progress{
+            position:absolute;
+            width:200rpx;
+            height:20rpx;
+            background:#ffffff;
+            border-radius:10rpx;
+            overflow:hidden;
+            display:block;
+            right:112rpx;
+            top:558rpx;
+            .progress-val{
+                background:rgb(42,182,245);
+                height: 20rpx;
+            }
+        }
+    }
+    
+}
+.tool-bar{
+    width: 100%;
+    position: fixed;
+    bottom:10rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.niudan-btn{
+    position: fixed;
+    top:20%;
+    right:10rpx ;
+}

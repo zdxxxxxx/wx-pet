@@ -1,0 +1,34 @@
+.model-content {
+  border-radius: 50rpx 50rpx 0 0;
+  background: #ffffff;
+  position: relative;
+}
+.model-content .model-icon {
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  top: -60rpx;
+  left: 50%;
+  margin-left: -60rpx;
+  border-radius: 100rpx;
+  overflow: hidden;
+}
+.model-content .model-icon image {
+  margin: 15rpx 0 0 15rpx;
+  width: 90rpx;
+  height: 90rpx;
+}
+.model-content .header {
+  height: 40rpx;
+  width: 100%;
+  position: relative;
+}
+.model-content .header .icon {
+  position: absolute;
+  right: 40rpx;
+  top: 20rpx;
+}
+.model-style {
+  overflow: inherit;
+  background: none;
+}

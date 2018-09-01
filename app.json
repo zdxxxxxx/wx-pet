@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/poi/poi",
+    "pages/index/index",
+    "pages/niudan/niudan",
+    "pages/map/map",
+    "pages/tujian/tujian",
+    "pages/chengjiu/chengjiu",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "rgba(255,255,255,0)",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  }
+}

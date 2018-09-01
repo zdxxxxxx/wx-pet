@@ -1,0 +1,9 @@
+<!-- index.wxml -->
+<view class="container">
+    <map id="ofoMap" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" bindregionchange="bindregionchange" markers="{{markers}}" controls="{{controls}}" bindmarkertap="bindmarkertap" bindcontroltap="bindcontroltap" show-location>
+        <cover-view class="baohuqu" bindtap="goIndex">
+            <cover-image src="https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_%E4%BF%9D%E6%8A%A4%E5%8C%BA.png"></cover-image>
+        </cover-view>
+        <cover-view class="poi-list-container"></cover-view>
+    </map>
+</view>

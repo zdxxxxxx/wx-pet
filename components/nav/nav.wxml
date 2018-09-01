@@ -1,0 +1,3 @@
+<view class="nav">
+    <image src="../../images/back.png" bindtap="onTap" />
+</view>

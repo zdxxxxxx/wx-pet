@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "nav": "/components/nav/nav",
+        "userInfo": "/components/userInfo/userInfo",
+        "van-button": "/miniprogram_npm/vant-weapp/button/index",
+        "progress": "/components/progress/progress",
+        "sidebar": "/components/sidebar/sidebar",
+        "btmModel": "/components/btmModel/index"
+    }
+}

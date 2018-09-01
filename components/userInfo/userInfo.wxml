@@ -1,0 +1,17 @@
+<view class="user-info-container">
+    <view class="avatar">
+        <image src="{{avatarUrl}}" />
+        <button open-type="getUserInfo" class="get-info-btn" bindgetuserinfo="setUserInfo"></button>
+    </view>
+    <view class='icon'>
+        <image src="https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/%E5%A4%B4%E5%83%8F-%E9%A1%B6%E5%B1%82%E8%A3%85%E9%A5%B0.png" />
+    </view>
+    <view class="info">
+        <view class="title">
+            <slot name="title"></slot>
+        </view>
+        <view class="sub-title">
+            <slot name="sub-title"></slot>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,53 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="pet-info">
+    <view class="name">
+      <text>麋鹿</text>
+    </view>
+    <view class="num">
+      <text>珍惜度</text>
+      <view class="stars" style="margin-left:10rpx;"></view>
+      <view class="stars"></view>
+      <view class="stars"></view>
+      <view class="stars"></view>
+      <view class="stars"></view>
+    </view>
+    <view class="num">
+      <text>健康值</text>
+      <view class="info">
+        <view class="progress-bg" style="width:30%;background:rgb(46,255,184)"></view>
+      </view>
+    </view>
+    <view class="num">
+      <text>成长值</text>
+      <view class="info">
+        <view class="progress-bg" style="width:40%;background:rgb(256,163,27)"></view>
+      </view>
+    </view>
+  </view>
+  <sidebar bottomBtn="{{bottomBtn}}"></sidebar>
+  <userInfo avatar="{{userInfo.avatarUrl}}">
+    <view slot="title">我的保护区</view>
+    <view slot="sub-title">{{current.index+1}}/{{animals.length}}</view>
+  </userInfo>
+  <swiper bindchange="silder" class="bg" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+    <block wx:for="{{animals}}" wx:for-index="idx" wx:key="{{idx}}">
+      <swiper-item>
+        <image class="bg-img" src="{{item.bg}}" />
+        <view class="pet-container">
+          <image class="bg-pet" src="{{item.pet}}" />
+          <image class="bg-food" src="{{item.food}}" bindtap="feed" />
+          <progress percent="{{item.progress}}"></progress>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="bottom-btns">
+    <view class="btn-icon" wx:for="{{bottomBtns}}" wx:for-index="idx" wx:key="{{idx}}">
+      <image src="{{item.iconUrl}}" bindtap="showModel" data-model="{{item.modelType}}" />
+    </view>
+  </view>
+  <btmModel show="{{showTask}}" heightPercent="40">
+    <view slot='content'></view>
+  </btmModel>
+</view>

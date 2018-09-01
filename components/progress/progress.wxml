@@ -1,0 +1,3 @@
+<view class="progress-bar-bg">
+    <view class="progress-bar" style="width:{{cur_width+'rpx'}}"></view>
+</view>

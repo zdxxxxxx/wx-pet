@@ -1,0 +1,15 @@
+<!-- index.wxml -->
+<view class="container">
+    <sidebar bottomBtn="{{bottomBtn}}"></sidebar>
+    <userInfo avatar="{{userInfo.avatarUrl}}">
+        <view slot="title">极地</view>
+        <view slot="sub-title">1/{{imgUrls.length}}</view>
+    </userInfo>
+    <swiper class="bg" circular="{{circular}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:for-index="idx" wx:key="{{idx}}">
+            <swiper-item>
+                <image class="bg-img" src="{{item.bg}}" />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

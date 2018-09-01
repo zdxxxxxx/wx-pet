@@ -1,0 +1,13 @@
+.nav {
+    position: fixed;
+    top: 60rpx;
+    left: 25rpx;
+    z-index: 1000;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.nav image {
+    width: 100%;
+    height: 100%
+}

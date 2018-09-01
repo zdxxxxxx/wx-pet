@@ -1,0 +1,128 @@
+/**index.wxss**/
+.bg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .bg-img{
+        position:absolute;
+        width:100%;
+        height: 100%;
+    }
+    .pet-container{
+
+        position: absolute;
+        height: 600rpx;
+        width: 100%;
+        top:55%;
+        margin-top: -300rpx;
+        text-align: center;
+       
+        .bg-pet{
+            width:410rpx;
+            height:500rpx;
+        }
+        .bg-food{
+            position:absolute;
+            width:300rpx;
+            height:230rpx;
+            display:block;
+            right:50rpx;
+            top:325rpx;
+        }
+        .progress{
+            position:absolute;
+            width:200rpx;
+            height:20rpx;
+            background:#ffffff;
+            border-radius:10rpx;
+            overflow:hidden;
+            display:block;
+            right:112rpx;
+            top:558rpx;
+            .progress-val{
+                background:rgb(42,182,245);
+                height: 20rpx;
+            }
+        }
+    }
+    
+}
+.pet-info{
+    position: absolute;
+    width: 300rpx;
+    height:230rpx;
+    top:220rpx;
+    left:30rpx;
+    z-index: 2;
+    border-radius: 40rpx;
+    padding-left: 12rpx;
+    padding-top: 30rpx;
+    background: rgba(255,255,255,.5);
+    .name{
+        font-size: 28rpx;
+        font-weight: bold;
+        margin-bottom: 20rpx;
+    }
+    .num{
+        font-size: 24rpx;
+        font-weight: bold;
+        margin-bottom: 10rpx;
+        .info{
+            width: 200rpx;
+            height: 16rpx;
+            display: inline-block;
+            margin-left: 10rpx;
+            background:rgb(120,85,56);
+            border-radius: 10rpx;
+            overflow: hidden;
+            border: 1px solid #000000;
+            .progress-bg{
+                width: 30%;
+                height: 16rpx;
+                border-radius: 10rpx;
+                background:rgb(46,255,184);
+            }
+        }
+    }
+    .stars{
+        display: inline-block;
+        width: 30rpx;
+        height: 30rpx;
+        margin-right: 10rpx;
+        background: url('https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/star-grey.png');
+        background-size: 100% 100%;
+        vertical-align:middle;
+    }
+}
+.bottom-btns{
+    position: fixed;
+    bottom:50rpx;
+    right:200rpx;
+    width: 300rpx;
+    height: 100rpx;
+    z-index: 10;
+    .btn-icon{
+        display: inline-block;
+        width: 80rpx;
+        height: 90rpx;
+        margin-right: 40rpx;
+        image{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.tool-bar{
+    width: 100%;
+    position: fixed;
+    bottom:10rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.niudan-btn{
+    position: fixed;
+    top:20%;
+    right:10rpx ;
+}

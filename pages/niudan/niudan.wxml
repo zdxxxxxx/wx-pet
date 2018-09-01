@@ -1,0 +1,26 @@
+<view class="container">
+    <nav></nav>
+    <view class="bg-container">
+        <image mode="widthFix" class="bg" src="https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/bg_niudanji.png" />
+    </view>
+    <view class="start-btn {{start?'start':''}}" bindtap="start">
+        <image class="btn-image" src="https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn.png" />
+    </view>
+    <view class="eggs">
+        <view wx:for="{{eggs}}" wx:for-index="idx" wx:key="{{item.id}}" class="egg {{'pos'+(idx+1)}} {{start?'on':''}}" style="background-image: url('{{item.url}}'); background-position: center center; background-repeat: no-repeat; background-size: 100% 100%;"></view>
+    </view>
+    <view class="egg-exit-door">
+        <view class="poupResult {{scale?'scale':''}} ">
+            <view class="lightRing {{open?'show':'hide'}} "></view>
+            <view class="openLight {{open?'show':'hide'}}"></view>
+            <view class="showEgg {{exit?'show':''}}">
+                <view id="inner" style="background-image: url({{exitEgg.url}});"></view>
+            </view>
+            <view class="luckEgg">
+                <view class="luckEgg-top luckEggHalf {{scale?'':'hide'}} {{open?'show':''}}" style="background-image: url({{exitEgg.url}})"></view>
+                <view class="luckEgg-bottom luckEggHalf  {{scale?'':'hide'}} {{open?'show':''}}" style="background-image: url({{exitEgg.url}})"></view>
+            </view>
+        </view>
+    </view>
+    <view class="mask {{open?'':'hide'}}"></view>
+</view>
