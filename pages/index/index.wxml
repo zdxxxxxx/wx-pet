@@ -2,26 +2,22 @@
 <view class="container">
   <view class="pet-info">
     <view class="name">
-      <text>麋鹿</text>
+      <text>{{current.name}}</text>
     </view>
     <view class="num">
-      <text>珍惜度</text>
-      <view class="stars" style="margin-left:10rpx;"></view>
-      <view class="stars"></view>
-      <view class="stars"></view>
-      <view class="stars"></view>
-      <view class="stars"></view>
+      <text style="margin-right:10rpx;">珍惜度</text>
+      <view class="stars" wx:for="{{[0,1,2,3,4]}}" wx:for-index="idx" wx:key="{{idx}}" style="background-image:url({{item<current.level?'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/star-light.png':'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/star-grey.png'}});"></view>
     </view>
     <view class="num">
       <text>健康值</text>
       <view class="info">
-        <view class="progress-bg" style="width:30%;background:rgb(46,255,184)"></view>
+        <view class="progress-bg" style="width:{{current.health+'%'}};background:rgb(46,255,184)"></view>
       </view>
     </view>
     <view class="num">
       <text>成长值</text>
       <view class="info">
-        <view class="progress-bg" style="width:40%;background:rgb(256,163,27)"></view>
+        <view class="progress-bg" style="width:{{current.grow+'%'}};background:rgb(256,163,27)"></view>
       </view>
     </view>
   </view>
@@ -48,6 +44,11 @@
     </view>
   </view>
   <btmModel show="{{showTask}}" heightPercent="40">
-    <view slot='content'></view>
+    <view slot='content' class='task-list'>
+      <view class="item" wx:for="{{tasks}}" wx:for-index="idx" wx:key="idx" style="background-image:url('{{item.bg}}');">
+        <image class="task-title" src="{{item.title_bg}}" />
+        <image mode="widthFix" class="task-btn" src="{{item.isComplete?item.comp_btn_bg:item.btn_bg}}" />
+      </view>
+    </view>
   </btmModel>
 </view>

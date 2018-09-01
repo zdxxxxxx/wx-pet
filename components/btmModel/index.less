@@ -1,30 +1,44 @@
 .model-content{
     border-radius: 50rpx 50rpx 0 0;
-    background: #ffffff;
+    background: rgb(244,231,195);
     position: relative;
     .model-icon{
-        position: absolute;
-        width: 120rpx;
-        height: 120rpx;
-        top: -60rpx;
-        left: 50%;
-        margin-left: -60rpx;
-        border-radius: 100rpx;
-        overflow: hidden;
+        position:absolute;
+        width:200rpx;
+        height:200rpx;
+        top:-100rpx;
+        left:50%;
+        margin-left:-100rpx;
+        border-radius:100rpx;
+        overflow:hidden;
+        z-index:21;
         image{
-            margin: 15rpx 0 0 15rpx;
-            width: 90rpx;
-            height: 90rpx;
+            width:100%;
+            height:100%;
         }
     }
     .header{
-        height: 40rpx;
+        height: 90rpx;
         width: 100%;
         position: relative;
+        z-index: 20;
+        .title{
+            font-size:28rpx;
+            color:rgb(127,26,0);
+            position:absolute;
+            top:30rpx;
+            left:40rpx;
+        }
         .icon{
             position: absolute;
             right: 40rpx;
             top: 20rpx;
+            height: 20rpx;
+            width: 20rpx;
+            image{
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 }

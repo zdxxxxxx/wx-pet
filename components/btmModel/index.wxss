@@ -1,32 +1,46 @@
 .model-content {
   border-radius: 50rpx 50rpx 0 0;
-  background: #ffffff;
+  background: #f4e7c3;
   position: relative;
 }
 .model-content .model-icon {
   position: absolute;
-  width: 120rpx;
-  height: 120rpx;
-  top: -60rpx;
+  width: 200rpx;
+  height: 200rpx;
+  top: -100rpx;
   left: 50%;
-  margin-left: -60rpx;
+  margin-left: -100rpx;
   border-radius: 100rpx;
   overflow: hidden;
+  z-index: 21;
 }
 .model-content .model-icon image {
-  margin: 15rpx 0 0 15rpx;
-  width: 90rpx;
-  height: 90rpx;
+  width: 100%;
+  height: 100%;
 }
 .model-content .header {
-  height: 40rpx;
+  height: 90rpx;
   width: 100%;
   position: relative;
+  z-index: 20;
+}
+.model-content .header .title {
+  font-size: 28rpx;
+  color: #7f1a00;
+  position: absolute;
+  top: 30rpx;
+  left: 40rpx;
 }
 .model-content .header .icon {
   position: absolute;
   right: 40rpx;
   top: 20rpx;
+  height: 20rpx;
+  width: 20rpx;
+}
+.model-content .header .icon image {
+  height: 100%;
+  width: 100%;
 }
 .model-style {
   overflow: inherit;

@@ -1,10 +1,13 @@
 <van-popup custom-class='model-style' show="{{ show }}" position="bottom" bind:click-overlay="hide">
     <view class="model-content" style="height:{{height+'rpx'}}">
         <view class="model-icon">
-            <image src="https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_zuorenwu.png" />
+            <image src="https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/taskList/icon_%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8.png" />
         </view>
         <view class="header">
-            <view class="icon">x</view>
+            <text class="title">任务列表</text>
+            <view class="icon">
+                <image src="https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/card_close.png" bindtap='hide' />
+            </view>
         </view>
         <slot name="content"></slot>
     </view>

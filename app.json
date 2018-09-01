@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/poi/poi",
     "pages/index/index",
+    "pages/poi/poi",
     "pages/niudan/niudan",
     "pages/map/map",
     "pages/tujian/tujian",
