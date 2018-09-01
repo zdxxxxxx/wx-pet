@@ -1,125 +1,136 @@
-/**index.wxss**/
-.bg {
+page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fad57d;
+}
+page .cardContainer {
+  width: 100%;
+  padding-top: 198rpx;
+}
+page .cardContainer:after {
+  clear: both;
+  display: block;
+  content: "";
+  visibility: hidden;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+page .cardContainer .cardItem {
+  margin: 0 30rpx;
+  width: 330rpx;
+  height: 500rpx;
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+}
+page .cardContainer .cardItem:nth-child(2n) {
+  margin-left: 0;
+}
+page .cardContainer .cardItem .content {
   width: 100%;
   height: 100%;
   position: relative;
+  background-color: #fad57d;
+  background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/card_bg.png);
+  background-size: 330rpx 480rpx;
+  background-repeat: no-repeat;
 }
-.bg .bg-img {
+page .cardContainer .cardItem .content .title {
   position: absolute;
+  top: 70rpx;
+  font-size: 32rpx;
   width: 100%;
-  height: 100%;
-}
-.bg .pet-container {
-  position: absolute;
-  height: 600rpx;
-  width: 100%;
-  top: 55%;
-  margin-top: -300rpx;
   text-align: center;
+  color: #fff;
+  font-weight: 500;
 }
-.bg .pet-container .bg-pet {
-  width: 410rpx;
-  height: 500rpx;
+page .cardContainer .cardItem .content image {
+  width: 100%;
 }
-.bg .pet-container .bg-food {
+page .cardContainer .cardItem .content image.pic {
+  border-radius: 50%;
   position: absolute;
-  width: 300rpx;
-  height: 230rpx;
-  display: block;
-  right: 50rpx;
-  top: 325rpx;
-}
-.bg .pet-container .progress {
-  position: absolute;
-  width: 200rpx;
-  height: 20rpx;
-  background: #ffffff;
-  border-radius: 10rpx;
-  overflow: hidden;
-  display: block;
-  right: 112rpx;
-  top: 558rpx;
-}
-.bg .pet-container .progress .progress-val {
-  background: #2ab6f5;
-  height: 20rpx;
-}
-.pet-info {
-  position: absolute;
-  width: 300rpx;
-  height: 230rpx;
-  top: 220rpx;
-  left: 30rpx;
+  width: 240rpx;
+  height: 240rpx;
+  background-color: #fff;
   z-index: 2;
-  border-radius: 40rpx;
-  padding-left: 12rpx;
-  padding-top: 30rpx;
-  background: rgba(255, 255, 255, 0.5);
+  bottom: 108rpx;
+  left: 50%;
+  top: 70px;
+  margin-left: -124rpx;
+  margin-top: 20rpx;
 }
-.pet-info .name {
-  font-size: 28rpx;
-  font-weight: bold;
-  margin-bottom: 20rpx;
-}
-.pet-info .num {
-  font-size: 24rpx;
-  font-weight: bold;
-  margin-bottom: 10rpx;
-}
-.pet-info .num .info {
+page .cardContainer .cardItem .content .cardBtn {
+  background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/card_btn.png);
   width: 200rpx;
-  height: 16rpx;
-  display: inline-block;
-  margin-left: 10rpx;
-  background: #785538;
-  border-radius: 10rpx;
-  overflow: hidden;
-  border: 1px solid #000000;
-}
-.pet-info .num .info .progress-bg {
-  width: 30%;
-  height: 16rpx;
-  border-radius: 10rpx;
-  background: #2effb8;
-}
-.pet-info .stars {
-  display: inline-block;
-  width: 30rpx;
-  height: 30rpx;
-  margin-right: 10rpx;
-  background: url('https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/star-grey.png');
+  height: 80rpx;
   background-size: 100% 100%;
-  vertical-align: middle;
+  position: absolute;
+  bottom: -8rpx;
+  left: 50%;
+  margin-left: -100rpx;
 }
-.bottom-btns {
-  position: fixed;
-  bottom: 50rpx;
-  right: 200rpx;
-  width: 300rpx;
-  height: 100rpx;
-  z-index: 10;
-}
-.bottom-btns .btn-icon {
-  display: inline-block;
-  width: 80rpx;
-  height: 90rpx;
-  margin-right: 40rpx;
-}
-.bottom-btns .btn-icon image {
+page .cardContainer .cardItem .message {
   width: 100%;
   height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fad57d;
+  background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/card_bg.png);
+  background-size: 330rpx 480rpx;
+  background-repeat: no-repeat;
 }
-.tool-bar {
-  width: 100%;
-  position: fixed;
-  bottom: 10rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  box-sizing: border-box;
+page .cardContainer .cardItem .message p {
+  position: absolute;
+  font-size: 28rpx;
+  top: 160rpx;
+  left: 40rpx;
+  right: 40rpx;
+  bottom: 100rpx;
+  overflow-y: auto;
 }
-.niudan-btn {
-  position: fixed;
-  top: 20%;
-  right: 10rpx ;
+page .cardContainer .cardItem .message .closeBtn {
+  display: block;
+  width: 20rpx;
+  height: 20rpx;
+  background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/card_close.png);
+  background-size: cover;
+  position: absolute;
+  top: 90rpx;
+  right: 30rpx;
+}
+page .cardContainer .cardItem .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+}
+page .cardContainer .cardItem .back {
+  z-index: 1;
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+}
+page .cardContainer .cardItem .front,
+page .cardContainer .cardItem .back {
+  backface-visibility: hidden;
+  transition: 0.6s ease-out;
+  -webkit-transition: 0.6s ease-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

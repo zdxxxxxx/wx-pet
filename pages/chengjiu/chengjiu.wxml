@@ -1,4 +1,5 @@
-<view>
-    <nav></nav>
-    图鉴
+<view class="achievementContainer">
+    <view class="achievementItem">
+        <view class="achievementBtn"></view>
+    </view>
 </view>

@@ -1,1 +1,40 @@
-/* pages/chengjiu/chengjiu.wxss */
+page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #95e5f3;
+}
+page .achievementContainer {
+  width: 100%;
+  padding-top: 198rpx;
+}
+page .achievementContainer .achievementItem {
+  margin: 0 30rpx;
+  width: 330rpx;
+  height: 500rpx;
+  background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/card_bg.png);
+  background-size: 330rpx 480rpx;
+  position: relative;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+page .achievementContainer .achievementItem:nth-child(2n) {
+  margin-left: 0;
+}
+page .achievementContainer .achievementItem .achievementBtn {
+  background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/share_btn.png);
+  width: 160rpx;
+  height: 70rpx;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: -8rpx;
+  left: 50%;
+  margin-left: -80rpx;
+  border: none;
+}
+page .achievementContainer .achievementItem button:after {
+  border: none;
+  display: none;
+}

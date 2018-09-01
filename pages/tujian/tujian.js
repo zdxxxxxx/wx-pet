@@ -3,147 +3,82 @@
 const app = getApp()
 
 Page({
-  data: {
-    bottomBtns: [{
-      iconUrl: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_%E7%8E%A9%E5%85%B7.png',
-      modelType: 'toy',
-      text: '玩具',
-    }, {
-      iconUrl: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_zuorenwu.png',
-      modelType: 'task',
-      text: '做任务',
-    }],
-    bottomBtn: {
-      iconUrl: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_%E5%9C%B0%E5%9B%BE.png',
-      page: 'map',
-      text: '地图',
-    },
-    animals: [{
-      index: 0,
-      bg: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/bg1.png',
-      pet: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/%E5%8A%A8%E7%89%A9-%E9%BA%8B%E9%B9%BF.png',
-      food: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/%E9%A3%9F%E7%89%A9-%E7%B4%A0%E9%A3%9F.png',
-      progress: 40,
-      name: '麋鹿'
-    }, {
-      index: 1,
-      bg: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/bg2.png',
-      pet: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/%E5%8A%A8%E7%89%A9-%E5%8C%97%E6%9E%81%E7%86%8A.png',
-      food: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/%E9%A3%9F%E7%89%A9-%E9%B1%BC.png',
-      progress: 60,
-      name: '北极熊'
-    }],
-    current: {
-      bg: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/bg1.png',
-      pet: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/%E5%8A%A8%E7%89%A9-%E9%BA%8B%E9%B9%BF.png',
-      food: 'https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/%E9%A3%9F%E7%89%A9-%E7%B4%A0%E9%A3%9F.png',
-      progress: 40,
-      index: 0
-    },
-    userInfo: {},
-    indicatorDots: false,
-    autoplay: false,
-    duration: 500,
-    circular: true,
-    showTask: false,
-    showToy: false
+  data:{
+    toggle:true,
+    list:[{
+      title:"北极熊",
+      picUrl:"https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_%E6%89%AD%E8%9B%8B.png",
+      message:"正宗好凉茶，正宗好声音，您现在收看的是由加多宝凉茶独家赞助播出的中国好声音",
+      show:true
+    },{
+      title:"北极熊",
+      picUrl:"https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_%E6%89%AD%E8%9B%8B.png",
+      message:"正宗好凉茶，正宗好声音，您现在收看的是由加多宝凉茶独家赞助播出的中国好声音",
+      show:true
+    },{
+      title:"北极熊",
+      picUrl:"https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_%E6%89%AD%E8%9B%8B.png",
+      message:"正宗好凉茶，正宗好声音，您现在收看的是由加多宝凉茶独家赞助播出的中国好声音",
+      show:true
+    },{
+      title:"北极熊",
+      picUrl:"https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_%E6%89%AD%E8%9B%8B.png",
+      message:"正宗好凉茶，正宗好声音，您现在收看的是由加多宝凉茶独家赞助播出的中国好声音",
+      show:true
+    }]
   },
-  onLoad: function () {
-    let userInfo = wx.getStorageSync('userInfo');
-    let token = wx.getStorageSync('token');
-    if (!userInfo) {
-      app.getUserInfo().then((resArg) => {
-        this.setUserInfo(resArg);
-      })
-    } else {
-      this.setUserInfo(JSON.parse(userInfo));
+  onLoad:function(options){
+    // 生命周期函数--监听页面加载
+    
+  },
+  onReady:function(){
+    // 生命周期函数--监听页面初次渲染完成
+    
+  },
+  toggle(e){
+    console.log(e)
+    let index = e.currentTarget.dataset.index;
+    let list = this.data.list;
+    list[index].show = !list[index].show;
+    this.setData({
+      list:list
+    })
+  },
+  close(e){
+    console.log(e)
+    let index = e.currentTarget.dataset.index;
+    let list = this.data.list;
+    list[index].show = !list[index].show;
+    this.setData({
+      list:list
+    })
+  },
+  onShow:function(){
+    // 生命周期函数--监听页面显示
+    
+  },
+  onHide:function(){
+    // 生命周期函数--监听页面隐藏
+    
+  },
+  onUnload:function(){
+    // 生命周期函数--监听页面卸载
+    
+  },
+  onPullDownRefresh: function() {
+    // 页面相关事件处理函数--监听用户下拉动作
+    
+  },
+  onReachBottom: function() {
+    // 页面上拉触底事件的处理函数
+    
+  },
+  onShareAppMessage: function() {
+    // 用户点击右上角分享
+    return {
+      title: 'title', // 分享标题
+      desc: 'desc', // 分享描述
+      path: 'path' // 分享路径
     }
-
-    // if (!token) {
-    app.getToken().then(() => {
-      this.getData()
-    })
-    // } else {
-    //   this.getData()
-    // }
-  },
-  getData() {
-    wx.requestWithCookie({
-      url: `/user/info`,
-      method: 'GET',
-      data: {
-
-      },
-      success: (res) => {
-        console.log(res);
-      },
-      fail() {}
-    })
-  },
-  getAnimals() {
-    wx.requestWithCookie({
-      url: `/user/userAnimal`,
-      method: 'GET',
-      data: {
-
-      },
-      success: (res) => {
-        console.log(res);
-      },
-      fail() {}
-    })
-  },
-  convertData(data) {
-
-  },
-  setUserInfo(info) {
-    console.log(info)
-    this.setData({
-      userInfo: info
-    })
-  },
-  go: function (e) {
-    const {
-      page
-    } = e.target.dataset;
-    wx.navigateTo({
-      url: `../${page}/${page}`
-    });
-  },
-  show: function () {
-    const {
-      animals
-    } = this.data;
-    this.setData({
-      animals: animals.map(item => {
-        item.progress = Math.ceil(Math.random() * 100);
-        return item;
-      })
-    })
-  },
-  silder(value) {
-    const {
-      current
-    } = value.detail;
-    this.setData({
-      current: this.data.animals[current]
-    })
-  },
-  showModel(e) {
-    const {
-      model
-    } = e.currentTarget.dataset;
-    if (model === 'toy') {
-      this.setData({
-        showJoy: true
-      })
-    } else if (model === 'task') {
-      this.setData({
-        showTask: true
-      })
-    }
-  },
-  feed() {
-
   }
 })

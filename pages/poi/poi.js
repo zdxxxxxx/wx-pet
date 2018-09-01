@@ -4,7 +4,29 @@ Page({
         scale: 18,
         latitude: 0,
         longitude: 0,
-        markers: []
+        markers: [],
+        tab:{
+            list:[{
+                title:'打卡',
+                id:'0'
+            },{
+                title:'我的足迹',
+                id:'1'
+            }
+            ],
+            selectedId:'0'
+        },
+        list:[{
+            address:'天通中苑东区18号楼',
+            title:'乾清宫',
+            status:0
+        }]
+    },
+    tabChange(e){
+        console.log(e);
+        this.setData({
+            'tab.selectedId':e.currentTarget.dataset.index
+        })
     },
     onLoad: function () {
         wx.getLocation({

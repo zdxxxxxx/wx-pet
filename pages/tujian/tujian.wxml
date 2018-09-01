@@ -1,4 +1,22 @@
-<view>
-  <nav></nav>
-  图鉴
+<view class="cardContainer">
+  <!-- <view class="cardItem">
+    <view class="content {{item.toggle?'front':'back'}}">
+      <image class="pic" mode="widthFix"></image>
+      <view class="cardBtn" catchtap="toggle" data-index="{index}"></view>
+    </view>
+    <view class="message {{item.toggle?'back':'front'}}">
+      <span class="closeBtn" catchtap="close" data-index="{index}"></span>
+    </view>
+  </view> -->
+  <view class="cardItem" wx:for="{{list}}">
+    <view class="content {{item.show==true?'front':'back'}}">
+      <view class="title">{{item.title}}</view>
+      <image class="pic" src="{{item.picUrl}}" mode="widthFix"></image>
+      <view class="cardBtn" catchtap="toggle" data-index="{{index}}"></view>
+    </view>
+    <view class="message {{item.show==true?'back':'front'}}">
+      <p>{{item.message}}</p>
+      <span class="closeBtn" catchtap="close" data-index="{{index}}"></span>
+    </view>
+  </view>
 </view>

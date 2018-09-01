@@ -11,15 +11,15 @@
   right: 0;
   bottom: 50%;
   width: 100%;
-  height: 50%;
+  height: 55%;
   z-index: 1;
 }
 .baohuqu {
   position: absolute;
-  bottom: 50rpx;
+  bottom: 90rpx;
   width: 120rpx;
   height: 120rpx;
-  right: 50rpx;
+  right: 30rpx;
 }
 .map-cover-view {
   position: relative;
@@ -32,6 +32,89 @@
   background: inherit;
   height: 50%;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+.poi-list-container .poi-list-tab {
+  height: 100rpx;
+  background-color: #f7a72d;
+  border-radius: 50rpx 50rpx 0 0;
+}
+.poi-list-container .poi-list-tab .poi-list-tab-item {
+  height: 100%;
+  line-height: 100rpx;
+  width: 50%;
+  float: left;
+  font-size: 34rpx;
+  text-align: center;
+}
+.poi-list-container .poi-list-tab .poi-list-tab-item .span {
+  color: #fff;
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.poi-list-container .poi-list-tab .poi-list-tab-item .span.on {
+  text-shadow: 0rpx 0rpx 10rpx #000;
+  border-bottom: #b45500 solid 4rpx;
+}
+.poi-list-container .poi-list-content {
+  flex: 1;
+  background-color: #f7ebce;
+}
+.poi-list-container .poi-list-content .poi-list-content-list {
+  padding: 0 30rpx;
+}
+.poi-list-container .poi-list-content .poi-list-content-list .item {
+  padding: 30rpx 0;
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f2e4c0;
+}
+.poi-list-container .poi-list-content .poi-list-content-list .item .rank {
+  width: 36rpx;
+  height: 50rpx;
+  background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/rank_bg.png);
+  background-repeat: no-repeat;
+  background-size: 36rpx 50rpx;
+  font-size: 22rpx;
+  text-align: center;
+  padding-top: 6rpx;
+  margin-right: 20rpx;
+}
+.poi-list-container .poi-list-content .poi-list-content-list .item .address {
+  flex: 1;
+}
+.poi-list-container .poi-list-content .poi-list-content-list .item .address .p {
+  display: block;
+}
+.poi-list-container .poi-list-content .poi-list-content-list .item .address .p:first-child {
+  color: #353535;
+  font-size: 28rpx;
+}
+.poi-list-container .poi-list-content .poi-list-content-list .item .address .p:last-child {
+  color: #717171;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+.poi-list-container .poi-list-content .poi-list-content-list .item .btn {
+  width: 180rpx;
+  height: 60rpx;
+  background-size: cover;
+  position: relative;
+  top: 16rpx;
+}
+.poi-list-container .poi-list-content .poi-list-content-list .item .btn.no {
+  background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_no.png);
+}
+.poi-list-container .poi-list-content .poi-list-content-list .item .btn.on {
+  background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn_on.png);
 }
 .show {
   display: block;
