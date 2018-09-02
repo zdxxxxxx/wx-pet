@@ -7,7 +7,8 @@
         <image class="btn-image" src="https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/btn.png" />
     </view>
     <view class="eggs">
-        <view wx:for="{{eggs}}" wx:for-index="idx" wx:key="{{item.id}}" class="egg {{'pos'+(idx+1)}} {{start?'on':''}}" style="background-image: url('{{item.url}}'); background-position: center center; background-repeat: no-repeat; background-size: 100% 100%;"></view>
+        <view wx:for="{{eggs}}" wx:for-index="idx" wx:key="{{item.id}}" class="egg {{'pos'+(idx+1)}} {{start?'on':''}}"
+            style="background-image: url('{{item.url}}'); background-position: center center; background-repeat: no-repeat; background-size: 100% 100%;"></view>
     </view>
     <view class="egg-exit-door">
         <view class="poupResult {{scale?'scale':''}} ">
@@ -22,5 +23,6 @@
             </view>
         </view>
     </view>
+    <view class="times">剩余次数：{{times}}</view>
     <view class="mask {{open?'':'hide'}}"></view>
 </view>

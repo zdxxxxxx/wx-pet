@@ -1,7 +1,10 @@
 Component({
     options: {},
     properties: {
-
+        title: {
+            type: String,
+            value: ''
+        }
     },
     data: {
         // 弹窗显示控制

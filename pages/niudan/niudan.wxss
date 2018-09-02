@@ -14,7 +14,7 @@
 }
 .times {
   position: absolute;
-  top: 100rpx;
+  top: 120rpx;
 }
 .start-btn {
   width: 165rpx;

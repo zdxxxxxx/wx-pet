@@ -30,7 +30,8 @@ Page({
         circular: true
     },
     onLoad: function () {
-
+        let userInfo = wx.getStorageSync('userInfo');
+        this.setUserInfo(JSON.parse(userInfo));
     },
     getData() {
 
@@ -48,6 +49,11 @@ Page({
         wx.navigateTo({
             url: `../${page}/${page}`
         });
+    },
+    setUserInfo(info) {
+        this.setData({
+            userInfo: info
+        })
     },
     show: function () {
         const {

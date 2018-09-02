@@ -9,6 +9,9 @@ page {
 page .cardContainer {
   width: 100%;
   padding-top: 198rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 page .cardContainer:after {
   clear: both;
@@ -20,7 +23,7 @@ page .cardContainer:after {
   line-height: 0;
 }
 page .cardContainer .cardItem {
-  margin: 0 30rpx;
+  margin-bottom: 20rpx;
   width: 330rpx;
   height: 500rpx;
   position: relative;
@@ -28,7 +31,18 @@ page .cardContainer .cardItem {
   float: left;
 }
 page .cardContainer .cardItem:nth-child(2n) {
-  margin-left: 0;
+  margin-right: 10rpx;
+}
+page .cardContainer .cardItem:nth-child(2n-1) {
+  margin-left: 10rpx;
+}
+page .cardContainer .cardItem .lock {
+  width: 330rpx;
+  height: 500rpx;
+  position: absolute;
+  z-index: 99;
+  background-image: url('https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/lock.png');
+  background-size: 100% 100%;
 }
 page .cardContainer .cardItem .content {
   width: 100%;
@@ -70,7 +84,7 @@ page .cardContainer .cardItem .content .cardBtn {
   height: 80rpx;
   background-size: 100% 100%;
   position: absolute;
-  bottom: -8rpx;
+  bottom: 2rpx;
   left: 50%;
   margin-left: -100rpx;
 }
@@ -101,8 +115,9 @@ page .cardContainer .cardItem .message .closeBtn {
   background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/card_close.png);
   background-size: cover;
   position: absolute;
-  top: 90rpx;
-  right: 30rpx;
+  top: 64rpx;
+  right: 20rpx;
+  margin: 20rpx;
 }
 page .cardContainer .cardItem .front {
   z-index: 2;
@@ -133,4 +148,10 @@ page .cardContainer .cardItem .back {
   position: absolute;
   top: 0;
   left: 0;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
 }

@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/tujian/tujian",
+    "pages/niudan/niudan",
     "pages/index/index",
     "pages/poi/poi",
-    "pages/niudan/niudan",
     "pages/map/map",
-    "pages/tujian/tujian",
     "pages/chengjiu/chengjiu",
     "pages/logs/logs"
   ],

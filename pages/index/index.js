@@ -89,7 +89,8 @@ Page({
         duration: 500,
         circular: true,
         showTask: false,
-        showToy: false
+        showToy: false,
+        userData: {}
     },
     onLoad: function () {
         this.convertTask(this.data.tasks);
@@ -103,13 +104,15 @@ Page({
             this.setUserInfo(JSON.parse(userInfo));
         }
 
-        // if (!token) {
-        app.getToken().then(() => {
+        if (!token) {
+            app.getToken().then(() => {
+                this.getData();
+                this.getAnimals();
+            })
+        } else {
+            this.getAnimals();
             this.getData()
-        })
-        // } else {
-        //   this.getData()
-        // }
+        }
     },
     getData() {
         wx.requestWithCookie({
@@ -119,26 +122,63 @@ Page({
 
             },
             success: (res) => {
-                console.log(res);
+                this.setData({
+                    userData: res.data
+                })
             },
             fail() {}
         })
     },
     getAnimals() {
         wx.requestWithCookie({
-            url: `/user/userAnimal`,
+            url: `/userAnimal`,
             method: 'GET',
             data: {
 
             },
             success: (res) => {
-                console.log(res);
+                this.convertAnimal(res.data)
             },
             fail() {}
         })
     },
-    convertData(data) {
+    convertAnimal(data) {
+        const {
+            user_animal = []
+        } = data;
+        const map = {
+            id: 'id',
+            animal_id: 'animal_id',
+            animal_img: 'pet',
+            health: 'health',
+            hunger: 'grow',
+            name: 'name',
+            animal_rarity: 'level',
+            bg: 'bg',
+            food: 'food',
+            index: 'index'
+        };
+        const formatData = user_animal.map((d, index) => {
+            const obj = {};
+            if (index % 2 === 0) {
+                d['bg'] = "https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/bg1.png";
+                d['food'] = "https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/%E9%A3%9F%E7%89%A9-%E7%B4%A0%E9%A3%9F.png"
+            } else {
+                d['bg'] = "https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/bg2.png";
+                d['food'] = "https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/%E9%A3%9F%E7%89%A9-%E9%B1%BC.png"
+            }
+            d['animal_rarity'] = Math.ceil(d['animal_rarity'] / 20);
+            d['index'] = index;
+            Object.keys(map).forEach(key => {
+                obj[map[key]] = d[key];
+            });
+            return obj;
+        });
 
+        this.setData({
+            current: formatData[0],
+            animals: formatData
+        })
     },
     convertTask(data) {
         this.setData({
@@ -148,7 +188,6 @@ Page({
         })
     },
     setUserInfo(info) {
-        console.log(info)
         this.setData({
             userInfo: info
         })

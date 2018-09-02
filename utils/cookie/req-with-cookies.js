@@ -10,11 +10,13 @@ wx.requestWithCookie = (info) => {
         }
     info.success = successCallback
     info.url = `${host.host}` + info.url
-    console.log(info.url)
     wx.request(info)
 }
 
 function httpInterceptor(res, fn) {
+    if (res.statusCode === 200) {
+        return fn(res.data)
+    }
     return fn(res)
 }
 // 请求前在请求头上追加cookie

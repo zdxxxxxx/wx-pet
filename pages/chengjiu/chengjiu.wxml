@@ -1,4 +1,5 @@
 <view class="achievementContainer">
+    <nav></nav>
     <view class="achievementItem">
         <view class="achievementBtn"></view>
     </view>

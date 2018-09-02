@@ -33,12 +33,13 @@
 }
 .model-content .header .icon {
   position: absolute;
-  right: 40rpx;
-  top: 20rpx;
+  right: 50rpx;
+  top: 12rpx;
   height: 20rpx;
   width: 20rpx;
 }
 .model-content .header .icon image {
+  padding: 20rpx;
   height: 100%;
   width: 100%;
 }

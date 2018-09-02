@@ -1,6 +1,6 @@
 Page({
     data: {
-        times: 3,
+        times: 0,
         lock: false,
         start: false,
         exit: false,
@@ -14,10 +14,13 @@ Page({
         ],
         exitEgg: {},
         shake: false,
+        result: {},
+        userData: {}
     },
 
     onLoad: function () {
         this.initEggs();
+        this.getData();
     },
     initEggs: function () {
         const {
@@ -64,6 +67,7 @@ Page({
             })
             return;
         }
+        this.getResult()
         let newTimes = times - 1;
         this.setData({
             lock: true,
@@ -90,11 +94,11 @@ Page({
                 open: true
             })
             setTimeout(() => {
-                this.getResult()
+                this.over()
             }, 1500)
         }, 500)
     },
-    getResult: function () {
+    over: function () {
         setTimeout(() => {
             this.setData({
                 lock: false,
@@ -103,6 +107,52 @@ Page({
                 scale: false,
                 open: false,
             })
+            wx.showModal({
+                title: '恭喜扭到保护动物啦',
+                content: this.data.result.describe,
+                showCancel: false,
+                confirmText: '去看看',
+                success: function (res) {
+                    if (res.confirm) {
+                        wx.redirectTo({
+                            url: `../index/index`
+                        });
+                    } else if (res.cancel) {
+                        console.log('用户点击取消')
+                    }
+                }
+            })
         })
-    }
+    },
+    getResult() {
+        wx.requestWithCookie({
+            url: `/animal/new`,
+            method: 'GET',
+            data: {
+
+            },
+            success: (res) => {
+                this.setData({
+                    result: res.data.new_animal
+                })
+            },
+            fail() {}
+        })
+    },
+    getData() {
+        wx.requestWithCookie({
+            url: `/user/info`,
+            method: 'GET',
+            data: {
+
+            },
+            success: (res) => {
+                this.setData({
+                    userData: res.data,
+                    times: res.data.chance
+                })
+            },
+            fail() {}
+        })
+    },
 })

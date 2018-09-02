@@ -8,6 +8,9 @@ page {
     .cardContainer {
         width: 100%;
         padding-top: 198rpx;
+        display: flex;
+        justify-content:center;
+        flex-wrap:wrap;
         &:after {
             clear: both;
             display: block;
@@ -18,15 +21,26 @@ page {
             line-height: 0;
         }
         .cardItem {
-            margin: 0 30rpx;
+            margin-bottom:20rpx;
             width: 330rpx;
             height: 500rpx;
             position: relative;
             box-sizing: border-box;
             &:nth-child(2n) {
-                margin-left: 0;
+                margin-right: 10rpx;
+            }
+            &:nth-child(2n-1) {
+                margin-left: 10rpx;
             }
             float: left;
+            .lock{
+                width: 330rpx;
+                height: 500rpx;
+                position: absolute;
+                z-index: 99;
+                background-image:url('https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/lock.png'); 
+                background-size:100% 100%; 
+            }
             .content {
                 width: 100%;
                 height: 100%;
@@ -66,7 +80,7 @@ page {
                     height: 80rpx;
                     background-size: 100% 100%;
                     position: absolute;
-                    bottom: -8rpx;
+                    bottom:2rpx;
                     left: 50%;
                     margin-left: -100rpx;
                 }
@@ -97,8 +111,9 @@ page {
                     background-image: url(https://2018t3.oss-cn-beijing.aliyuncs.com/polar-bear/images/card_close.png);
                     background-size: cover;
                     position: absolute;
-                    top: 90rpx;
-                    right: 30rpx;
+                    top:64rpx;
+                    right:20rpx;
+                    margin:20rpx;
                 }
             }
             .front {
@@ -135,4 +150,10 @@ page {
             }
         }
     }
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
 }
